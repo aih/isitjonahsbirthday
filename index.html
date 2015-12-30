@@ -15,14 +15,17 @@
     color: black;
     }
   </style>
-<body ng-app ng-controller="birthdayController">
+<body ng-app="myApp" ng-controller="birthdayController">
 <div id="no" class="answer" style="display:none">NO</div>
 <div id="yes" class="answer">YES</div>
+{{date}} 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 <script>
-function birthdayController($scope){
-$scope.date=Date();
-} 
+var myApp = angular.module('myApp',[]);
+
+myApp.controller('birthdayController', ['$scope', function($scope) {
+  $scope.date = Date() ;
+}]);
 </script>
 </body>
 </html>
