@@ -15,7 +15,7 @@
     color: black;
     }
   </style>
-<body ng-app="myApp" ng-controller="birthdayController">
+<body ng-app="myApp" ng-controller="birthdayController" ng-cloak>
 <div id="no" class="answer" ng-if="!isBirthday">NO</div>
 <div id="yes" class="answer" ng-if="isBirthday">YES</div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
@@ -24,7 +24,7 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('birthdayController', ['$scope', function($scope) {
   $scope.date = new Date() ;
-  $scope.isBirthday = ($scope.date.getMonth==11)&&($scope.date.getDate==30);
+  $scope.isBirthday = ($scope.date.getMonth()==11)&&($scope.date.getDate()==30);
 }]);
 </script>
 </body>
