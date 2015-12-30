@@ -14,6 +14,9 @@
     text-decoration: none;
     color: black;
     }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
   </style>
 <body ng-app="myApp" ng-controller="birthdayController" ng-cloak>
 <div id="no" class="answer" ng-if="!isBirthday">NO</div>
